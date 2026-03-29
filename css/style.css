@@ -1,0 +1,63 @@
+/* Nome da marca — alinhado à tipografia da logo (sans, azul marinho) */
+.brand-oseucro {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  color: #1e3a5f;
+  letter-spacing: -0.03em;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+.brand-oseucro:hover {
+  opacity: 0.85;
+}
+
+/* WhatsApp marca: verde #25D366; degradê com teal #128C7E */
+.btn-whatsapp-solid {
+  background-color: #25d366;
+  color: #fff;
+}
+.btn-whatsapp-solid:hover {
+  background-color: #20bd5a;
+}
+.btn-whatsapp-gradient {
+  background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+}
+.btn-whatsapp-gradient:hover {
+  filter: brightness(1.05);
+}
+
+/* Drawer menu (index) */
+#nav-drawer-backdrop {
+  transition: opacity 0.2s ease;
+}
+#nav-drawer-panel {
+  transition: transform 0.25s ease;
+}
+#nav-drawer-backdrop.is-open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+#nav-drawer-panel.is-open {
+  transform: translateX(0) !important;
+}
+
+/* Botões de destaque / COLEÇÃO — alinhado ao catálogo (pill lilás, texto branco no hover) */
+.btn-destaque-catalogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #faf3e6;
+  color: #645f51;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+.btn-destaque-catalogo:hover {
+  background-color: #745090;
+  color: #fff6fe;
+}
