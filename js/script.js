@@ -102,32 +102,33 @@
       }
     }
 
-    var fio = document.getElementById("detalhe-fio");
-    if (fio) fio.textContent = p.fio;
+    // --- ALTERAÇÃO AQUI: Estilização da COR ---
+    var cores = p.variantes
+      .map(function (v) {
+        return (v.cor || "").trim();
+      })
+      .filter(Boolean);
+    var coresUnicas = Array.from(new Set(cores));
 
-    var tbody = document.getElementById("detalhe-tabela-variantes");
-    if (tbody) {
-      tbody.innerHTML = "";
-      p.variantes.forEach(function (v) {
-        var tr = document.createElement("tr");
-        tr.className = "border-b border-outline-variant/20";
-        tr.innerHTML =
-          "<td class=\"py-3 pr-4\">" +
-          escapeHtml(v.cor) +
-          "</td><td class=\"py-3 pr-4\">" +
-          escapeHtml(v.tamanho) +
-          "</td><td class=\"py-3 text-right font-semibold text-primary\">" +
-          cat.formatBRL(v.preco) +
-          "</td>";
-        tbody.appendChild(tr);
-      });
+    var corEl = document.getElementById("detalhe-cor");
+    if (corEl) {
+      // Aplicando negrito e o azul da marca no elemento de cores
+      corEl.classList.add("font-bold", "text-[#1e3a5f]");
+      corEl.textContent = coresUnicas.join(", ");
     }
 
-    var wa = document.getElementById("detalhe-whatsapp");
-    if (wa) {
-      wa.href = whatsappUrl(
-        "Olá! Tenho interesse na peça \"" + p.nome + '" (site oseucro).'
-      );
+    // --- ALTERAÇÃO AQUI: Estilização do FIO ---
+    var corEl = document.getElementById("detalhe-cor");
+    if (corEl) {
+      corEl.classList.remove("font-bold", "text-[#1e3a5f]"); // Remove o azul/negrito do conteúdo
+      corEl.textContent = coresUnicas.join(", ");
+    }
+
+// Volta o conteúdo do Fio para o padrão
+    var fioEl = document.getElementById("detalhe-fio");
+    if (fioEl) {
+      fioEl.classList.remove("font-bold", "text-[#1e3a5f]"); // Remove o azul/negrito do conteúdo
+      fioEl.textContent = p.fio;
     }
 
     if (okEl) okEl.hidden = false;
