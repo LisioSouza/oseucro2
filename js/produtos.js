@@ -24,6 +24,17 @@
       destaque: true,
     },
     {
+      id: "touca-laranja",
+      categoria: "toucas",
+      nome: "Touca laranja",
+      imagem:
+        "assets/img/touca-laranja.png",
+      imagens: ["assets/img/touca-laranja.png", "assets/img/touca-laranja2.png"],
+      fio: "Algodão premium 8/6",
+      variantes: [{ cor: "Laranja", tamanho: "Único (adulto)", preco: 60.0 }],
+      destaque: true,
+    },
+    {
       id: "touca-bordo",
       categoria: "toucas",
       nome: "Touca Bordô",
