@@ -67,8 +67,19 @@
 <div class="relative mb-10">
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-container rounded-full watercolor-blob"></div>
 <div class="relative z-10 flex justify-center">
-<div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-surface-container shadow-xl">
-<img id="detalhe-imagem" src="" alt="" class="w-full h-full object-cover"/>
+<div class="w-full max-w-md aspect-square rounded-3xl overflow-hidden border border-outline-variant/20 bg-surface-container-low shadow-xl">
+<div id="detalhe-carrossel" class="oseucro-carousel w-full h-full" aria-label="Imagens do produto">
+<div class="oseucro-carousel__viewport w-full h-full">
+<div id="detalhe-carrossel-track" class="oseucro-carousel__track" aria-live="polite"></div>
+</div>
+<button type="button" class="oseucro-carousel__btn oseucro-carousel__btn--prev" data-carousel-prev aria-label="Imagem anterior">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+</button>
+<button type="button" class="oseucro-carousel__btn oseucro-carousel__btn--next" data-carousel-next aria-label="Próxima imagem">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+</button>
+<div id="detalhe-carrossel-dots" class="oseucro-carousel__dots" aria-label="Selecionar imagem"></div>
+</div>
 </div>
 </div>
 </div>

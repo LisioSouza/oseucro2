@@ -79,11 +79,132 @@
     var back = document.getElementById("detalhe-voltar");
     if (back) back.href = voltarDetalhes(origem, categoria);
 
-    var img = document.getElementById("detalhe-imagem");
-    if (img) {
-      img.src = p.imagem;
-      img.alt = p.nome;
+    function uniqueImages(produto) {
+      var imgs = [];
+      if (produto && Array.isArray(produto.imagens)) imgs = produto.imagens.slice();
+      else if (produto && produto.imagem) imgs = [produto.imagem];
+      imgs = imgs
+        .map(function (s) {
+          return (s || "").trim();
+        })
+        .filter(Boolean);
+      return Array.from(new Set(imgs));
     }
+
+    function renderCarousel(produto) {
+      var root = document.getElementById("detalhe-carrossel");
+      var track = document.getElementById("detalhe-carrossel-track");
+      var dots = document.getElementById("detalhe-carrossel-dots");
+      if (!root || !track || !dots) return;
+
+      var imgs = uniqueImages(produto);
+      if (imgs.length === 0) return;
+
+      track.innerHTML = "";
+      dots.innerHTML = "";
+
+      var index = 0;
+      var prevBtn = root.querySelector("[data-carousel-prev]");
+      var nextBtn = root.querySelector("[data-carousel-next]");
+
+      function setIndex(i) {
+        var max = imgs.length - 1;
+        if (i < 0) i = 0;
+        if (i > max) i = max;
+        index = i;
+        track.style.transform = "translateX(" + -index * 100 + "%)";
+
+        if (prevBtn) prevBtn.disabled = index === 0;
+        if (nextBtn) nextBtn.disabled = index === max;
+        Array.from(dots.children).forEach(function (b, bi) {
+          if (bi === index) b.classList.add("is-active");
+          else b.classList.remove("is-active");
+        });
+        track.setAttribute("aria-label", "Imagem " + (index + 1) + " de " + imgs.length);
+      }
+
+      imgs.forEach(function (src, i) {
+        var slide = document.createElement("div");
+        slide.className = "oseucro-carousel__slide";
+
+        var img = document.createElement("img");
+        img.src = src;
+        img.alt = produto && produto.nome ? produto.nome + " — imagem " + (i + 1) : "Imagem do produto";
+        img.loading = i === 0 ? "eager" : "lazy";
+        img.decoding = "async";
+
+        slide.appendChild(img);
+        track.appendChild(slide);
+
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "oseucro-carousel__dot";
+        dot.setAttribute("aria-label", "Ir para imagem " + (i + 1));
+        dot.addEventListener("click", function () {
+          setIndex(i);
+        });
+        dots.appendChild(dot);
+      });
+
+      function goPrev() {
+        setIndex(index - 1);
+      }
+      function goNext() {
+        setIndex(index + 1);
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", goPrev);
+      if (nextBtn) nextBtn.addEventListener("click", goNext);
+
+      root.tabIndex = 0;
+      root.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          goPrev();
+        }
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          goNext();
+        }
+      });
+
+      var startX = 0;
+      var startY = 0;
+      var tracking = false;
+
+      function onTouchStart(ev) {
+        if (!ev.touches || ev.touches.length !== 1) return;
+        tracking = true;
+        startX = ev.touches[0].clientX;
+        startY = ev.touches[0].clientY;
+      }
+      function onTouchEnd(ev) {
+        if (!tracking) return;
+        tracking = false;
+        var t = (ev.changedTouches && ev.changedTouches[0]) || null;
+        if (!t) return;
+        var dx = t.clientX - startX;
+        var dy = t.clientY - startY;
+        if (Math.abs(dx) < 30 || Math.abs(dx) < Math.abs(dy)) return;
+        if (dx > 0) goPrev();
+        else goNext();
+      }
+
+      root.addEventListener("touchstart", onTouchStart, { passive: true });
+      root.addEventListener("touchend", onTouchEnd, { passive: true });
+
+      if (imgs.length <= 1) {
+        if (prevBtn) prevBtn.disabled = true;
+        if (nextBtn) nextBtn.disabled = true;
+        dots.style.display = "none";
+      } else {
+        dots.style.display = "";
+      }
+
+      setIndex(0);
+    }
+
+    renderCarousel(p);
 
     var titulo = document.getElementById("detalhe-titulo");
     if (titulo) titulo.textContent = p.nome;
