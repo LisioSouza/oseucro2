@@ -12,18 +12,7 @@
   ];
 
   const PRODUTOS = [
-    {
-      id: "touca-azul",
-      categoria: "toucas",
-      nome: "Touca Azul",
-      imagem:
-        "assets/img/touca-01.png",
-      imagens: ["assets/img/touca-01.png", "assets/img/banner-02.png"],
-      fio: "Algodão premium 8/6",
-      variantes: [{ cor: "Azul", tamanho: "Único (adulto)", preco: 60.0 }],
-      destaque: true,
-    },
-    {
+     {
       id: "touca-laranja",
       categoria: "toucas",
       nome: "Touca laranja",
@@ -35,28 +24,25 @@
       destaque: true,
     },
     {
-      id: "touca-bordo",
+      id: "touca-verde",
       categoria: "toucas",
-      nome: "Touca Bordô",
+      nome: "Bucket Hat Mosaic",
+      imagem:
+        "assets/img/touca-verde.png",
+      imagens: ["assets/img/touca-verde.png","assets/img/touca-verde2.png"],
+      fio: "Algodão multicolor",
+      variantes: [{ cor: "Mosaic verde", tamanho: "Único", preco: 60.0 }],
+    },
+    {
+      id: "touca-azul",
+      categoria: "toucas",
+      nome: "Touca Azul",
       imagem:
         "assets/img/touca-01.png",
       imagens: ["assets/img/touca-01.png", "assets/img/banner-02.png"],
       fio: "Algodão premium 8/6",
-      variantes: [{ cor: "Bordô", tamanho: "Único (adulto)", preco: 60.0 }],
+      variantes: [{ cor: "Azul", tamanho: "Único (adulto)", preco: 60.0 }],
       destaque: true,
-    },
-    {
-      id: "Touca verde",
-      categoria: "toucas",
-      nome: "Bucket Hat Mosaic",
-      imagem:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuDt-ZKuqRljwOUkP7gQLlRnd7m8FXPfL3chEhFMN5l_I8ZXj6XcNvjGnaDjn1K0maRHN7ioJTu_amdZrA82vF_E0ObWhjohxzznUszESZUmMVcG7ulC5ps5RxqYHM32sEMMUU-IdzUAW2rkMLpOV5ynjbNaI-8LM2S5asw2gpM8dfjtdzNJRLKh3YSuo-3L-CfJ8Fas57eKkPswkpl9itn-CfSCda6D_D7dZvWvyXW0pHUVbamuNqTEZSu-tgqcjZ0WfBLUoUKbT5BE",
-      imagens: [
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuDt-ZKuqRljwOUkP7gQLlRnd7m8FXPfL3chEhFMN5l_I8ZXj6XcNvjGnaDjn1K0maRHN7ioJTu_amdZrA82vF_E0ObWhjohxzznUszESZUmMVcG7ulC5ps5RxqYHM32sEMMUU-IdzUAW2rkMLpOV5ynjbNaI-8LM2S5asw2gpM8dfjtdzNJRLKh3YSuo-3L-CfJ8Fas57eKkPswkpl9itn-CfSCda6D_D7dZvWvyXW0pHUVbamuNqTEZSu-tgqcjZ0WfBLUoUKbT5BE",
-        "assets/img/banner-02.png",
-      ],
-      fio: "Algodão multicolor",
-      variantes: [{ cor: "Mosaic verde", tamanho: "Único", preco: 60.0 }],
     },
     {
       id: "bandana-floral-baby",
