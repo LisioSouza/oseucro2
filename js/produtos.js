@@ -122,17 +122,13 @@
       variantes: [{ cor: "Azul mar", tamanho: "150×150 cm", preco: 190.0 }],
     },
     {
-      id: "colar-coelho",
+      id: "colar-verde",
       categoria: "colares",
-      nome: "Colar Pingente Coelho",
-      imagem:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuB-FAeTz0wc7C8rTfTn8cYlJnISCi805Xy6qe1jrfsTUapwc5SrjMRGFhWJE2O-1h62T9Z5s0c6GrGAa7OHfRkrOxvGI8Xbxl2E_Kjt2QOzgP2FBh76AvCplL_iQHF9q9AdsYuAhre5pYOMhB04jzzBn60aE1f4WeHPH-h2RFos-BgrQ84KHEM2eNHwZpELfAgIpwGXDkYW8nXzkR9576jTr607P9OoLWwcPVMI0cSmgQL7oa2F5RBuRd4cib6R1nvECYUgMf-RzmSJ",
-      imagens: [
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuB-FAeTz0wc7C8rTfTn8cYlJnISCi805Xy6qe1jrfsTUapwc5SrjMRGFhWJE2O-1h62T9Z5s0c6GrGAa7OHfRkrOxvGI8Xbxl2E_Kjt2QOzgP2FBh76AvCplL_iQHF9q9AdsYuAhre5pYOMhB04jzzBn60aE1f4WeHPH-h2RFos-BgrQ84KHEM2eNHwZpELfAgIpwGXDkYW8nXzkR9576jTr607P9OoLWwcPVMI0cSmgQL7oa2F5RBuRd4cib6R1nvECYUgMf-RzmSJ",
-        "assets/img/banner-02.png",
-      ],
+      nome: "Colar Verde",
+      imagem:"assets/img/colar01.jpeg",
+      imagens: ["assets/img/colar01.jpeg", "assets/img/colar02.jpeg"],
       fio: "Algodão mercerizado",
-      variantes: [{ cor: "Bege", tamanho: "Pingente 4 cm", preco: 40.0 }],
+      variantes: [{ cor: "verde", tamanho: "Unico", preco: 40.0 }],
     },
     {
       id: "colar-ursinho",
