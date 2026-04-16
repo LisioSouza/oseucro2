@@ -28,20 +28,20 @@
     {
       id: "touca-verde",
       categoria: "toucas",
-      nome: "Bucket Hat Mosaic",
+      nome: "Touca Verde Claro",
       imagem:
         "assets/img/touca-verde.png",
       imagens: ["assets/img/touca-verde.png","assets/img/touca-verde2.png"],
-      fio: "Algodão multicolor",
-      variantes: [{ cor: "Mosaic verde", tamanho: "Único", preco: 60.0 }],
+      fio: "Algodão premium 8/6",
+      variantes: [{ cor: "verde claro", tamanho: "Único (adulto)", preco: 60.0 }],
     },
     {
-      id: "touca-azul",
+      id: "touca-verde-01",
       categoria: "toucas",
-      nome: "Touca Azul",
+      nome: "Touca Verde",
       imagem:
-        "assets/img/touca-01.png",
-      imagens: ["assets/img/touca-01.png", "assets/img/banner-02.png"],
+        "assets/img/touca-verde1.png",
+      imagens: ["assets/img/touca-verde-01.png", "assets/img/touca-verde-02.png"],
       fio: "Algodão premium 8/6",
       variantes: [{ cor: "Azul", tamanho: "Único (adulto)", preco: 60.0 }],
       destaque: true,
