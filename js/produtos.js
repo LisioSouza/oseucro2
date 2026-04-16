@@ -47,6 +47,17 @@
       destaque: true,
     },
     {
+      id: "touca-amarela-01",
+      categoria: "toucas",
+      nome: "Touca Amarela",
+      imagem:
+        "assets/img/touca-amarela-1.png",
+      imagens: ["assets/img/touca-amarela-1.png", "assets/img/touca-amarela-2.png"],
+      fio: "Algodão premium 8/6",
+      variantes: [{ cor: "Azul", tamanho: "Único (adulto)", preco: 60.0 }],
+      destaque: true,
+    },
+    {
       id: "bandana-floral-baby",
       categoria: "bandanas",
       nome: "Bandana Floral Baby",
