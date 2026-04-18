@@ -69,16 +69,24 @@
       destaque: true,
     },
     {
-      id: "colar01",
+      id: "colar-0",
       categoria: "colares",
       nome: "Colar Marrom",
       imagem:
-        "assets/img/colar01.png",
-      imagens: [
-        "assets/img/colar01.png",
-      ],
+        "assets/img/colar-0.png",
+      imagens: ["assets/img/colar-0.png","assets/img/colar-01.jpeg"],
       fio: "Algodão orgânico",
       variantes: [{ cor: "Marrom", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-1",
+      categoria: "colares",
+      nome: "Colar Brilho",
+      imagem:
+        "assets/img/colar-1.jpg",
+      imagens: ["assets/img/colar-1.jpg", "assets/img/colar-12.jpeg"],
+      fio: "Algodão orgânico",
+      variantes: [{ cor: "Pink", tamanho: "30cm (colar + alças)", preco: 45.0 }],
     },
     {
       id: "bandana-classica",
