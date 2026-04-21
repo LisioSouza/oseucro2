@@ -4,16 +4,146 @@
  */
 (function (global) {
   const CATEGORIAS = [
+    { id: "colares", label: "Colares" },
     { id: "toucas", label: "Toucas" },
+    { id: "cropped", label: "Cropped" },
     { id: "bandanas", label: "Bandanas" },
     { id: "bags", label: "Bags" },
     { id: "bolsas", label: "Bolsas" },
-    { id: "cropped", label: "Cropped" },
     { id: "pareos", label: "Pareôs" },
-    { id: "colares", label: "Colares" },
   ];
 
   const PRODUTOS = [
+    {
+      id: "colar-0",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-1-1.png",
+      imagens: ["assets/img/colar-1-1.png","assets/img/colar-1-2.png"],
+      fio: "Algodão",
+      variantes: [{ cor: "Azul marinho e Bege", tamanho: "30 cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-1",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-2-1.png",
+      imagens: ["assets/img/colar-2-1.png", "assets/img/colar-2-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Caramelo", tamanho: "30 cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-2",
+      categoria: "colares",
+      nome: "Colar Caracol Duplo",
+      imagem:
+        "assets/img/colar-3-1.png",
+      imagens: ["assets/img/colar-3-1.png", "assets/img/colar-3-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Marrom", tamanho: "30cm (colar + alças)", preco: 55.0 }],
+    },
+    {
+      id: "colar-3",
+      categoria: "colares",
+      nome: "Colar Caracol Duplo",
+      imagem:
+        "assets/img/colar-4-1.png",
+      imagens: ["assets/img/colar-4-1.png", "assets/img/colar-4-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 55.0 }],
+    },
+    {
+      id: "colar-4",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-5-1.png",
+      imagens: ["assets/img/colar-5-1.png","assets/img/colar-5-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "--", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-5",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-6-1.png",
+      imagens: ["assets/img/colar-6-1.png","assets/img/colar-6-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Verde e Preto", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-6",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-7-1.png",
+      imagens: ["assets/img/colar-7-1.png","assets/img/colar-7-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Bege escuro", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+   {
+      id: "colar-7",
+      categoria: "colares",
+      nome: "Colar Caracol Duplo",
+      imagem:
+        "assets/img/colar-8-1.png",
+      imagens: ["assets/img/colar-8-1.png","assets/img/colar-8-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Bege Claro", tamanho: "30cm (colar + alças)", preco: 55.0 }],
+    },
+    {
+      id: "colar-8",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-9-1.png",
+      imagens: ["assets/img/colar-9-1.png","assets/img/colar-9-2.png"],
+      fio: "Algodão",
+      variantes: [{ cor: "Marrom", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-9",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-10-1.png",
+      imagens: ["assets/img/colar-10-1.png","assets/img/colar-10-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Branco", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-10",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-11-1.png",
+      imagens: ["assets/img/colar-11-1.png","assets/img/colar-11-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-11",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-12-1.png",
+      imagens: ["assets/img/colar-12-1.png","assets/img/colar-12-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-10",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-11-1.png",
+      imagens: ["assets/img/colar-11-1.png","assets/img/colar-11-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
      {
       id: "touca-laranja",
       categoria: "toucas",
@@ -67,106 +197,6 @@
       fio: "Algodão premium 8/6",
       variantes: [{ cor: "Azul", tamanho: "Único (adulto)", preco: 60.0 }],
       destaque: true,
-    },
-    {
-      id: "colar-0",
-      categoria: "colares",
-      nome: "Colar Marrom",
-      imagem:
-        "assets/img/colar-0.png",
-      imagens: ["assets/img/colar-0.png","assets/img/colar-01.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Marrom", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-1",
-      categoria: "colares",
-      nome: "Colar Brilho",
-      imagem:
-        "assets/img/colar-1.jpg",
-      imagens: ["assets/img/colar-1.jpg", "assets/img/colar-12.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Pink", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-2",
-      categoria: "colares",
-      nome: "Colar Preto",
-      imagem:
-        "assets/img/colar-2.png",
-      imagens: ["assets/img/colar-2.png", "assets/img/colar-22.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Preto", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-3",
-      categoria: "colares",
-      nome: "Colar Azul Mescla",
-      imagem:
-        "assets/img/colar-3.png",
-      imagens: ["assets/img/colar-3.png", "assets/img/colar-31.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Azul", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-4",
-      categoria: "colares",
-      nome: "Colar Preto",
-      imagem:
-        "assets/img/colar-4.png",
-      imagens: ["assets/img/colar-4.png"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Preto", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-5",
-      categoria: "colares",
-      nome: "Colar Marrom",
-      imagem:
-        "assets/img/colar-5.png",
-      imagens: ["assets/img/colar-51.png","assets/img/colar-51.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Marrom", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-6",
-      categoria: "colares",
-      nome: "Colar Verde Mescla",
-      imagem:
-        "assets/img/colar-6.png",
-      imagens: ["assets/img/colar-6.png","assets/img/colar-61.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Verde Mescla", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-   {
-      id: "colar-7",
-      categoria: "colares",
-      nome: "Colar Bege",
-      imagem:
-        "assets/img/colar-7.png",
-      imagens: ["assets/img/colar-7.png","assets/img/colar-71.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Bege", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-8",
-      categoria: "colares",
-      nome: "Colar Bege",
-      imagem:
-        "assets/img/colar-8.png",
-      imagens: ["assets/img/colar-8.png","assets/img/colar-81.jpeg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Bege", tamanho: "30cm (colar + alças)", preco: 45.0 }],
-    },
-    {
-      id: "colar-9",
-      categoria: "colares",
-      nome: "Colar Verde",
-      imagem:
-        "assets/img/colar-9.png",
-      imagens: ["assets/img/colar-9.png","assets/img/colar-91.jpg"],
-      fio: "Algodão orgânico",
-      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
     },
     {
       id: "cropped-lavanda",

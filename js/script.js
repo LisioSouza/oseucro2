@@ -252,6 +252,29 @@
       fioEl.textContent = p.fio;
     }
 
+    var medidasEl = document.getElementById("detalhe-medidas");
+    if (medidasEl) {
+      var medidas = p.variantes
+        .map(function (v) {
+          return (v.tamanho || "").trim();
+        })
+        .filter(Boolean);
+      var medidaPrincipal = medidas.length ? medidas[0] : "30 cm";
+      var descricaoPorCategoria = {
+        colares: "a medida refere-se ao comprimento total da peça.",
+        toucas: "a medida refere-se ao contorno aproximado da peça.",
+        cropped: "a medida refere-se ao comprimento da peça no corpo.",
+        bandanas: "a medida refere-se ao comprimento total da peça aberta.",
+        bags: "a medida refere-se ao tamanho total da peça, incluindo alças.",
+        bolsas: "a medida refere-se ao tamanho total da peça, incluindo alças.",
+        pareos: "a medida refere-se ao comprimento total da peça aberta.",
+      };
+      var descricaoMedida =
+        descricaoPorCategoria[p.categoria] ||
+        "a medida refere-se ao comprimento total da peça.";
+      medidasEl.textContent = medidaPrincipal + " - " + descricaoMedida;
+    }
+
     if (okEl) okEl.hidden = false;
   }
 
