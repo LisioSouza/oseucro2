@@ -31,8 +31,8 @@
       imagem:
         "assets/img/colar-2-1.png",
       imagens: ["assets/img/colar-2-1.png", "assets/img/colar-2-2.jpeg"],
-      fio: "Algodão",
-      variantes: [{ cor: "Caramelo", tamanho: "30 cm (colar + alças)", preco: 45.0 }],
+      fio: "Cetim",
+      variantes: [{ cor: "Caramelo", tamanho: "30 cm (colar + alças)", preco: 50.0 }],
     },
     {
       id: "colar-2",
@@ -61,8 +61,8 @@
       imagem:
         "assets/img/colar-5-1.png",
       imagens: ["assets/img/colar-5-1.png","assets/img/colar-5-2.jpeg"],
-      fio: "Algodão",
-      variantes: [{ cor: "--", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+      fio: "Cetim",
+      variantes: [{ cor: "--", tamanho: "30cm (colar + alças)", preco: 50.0 }],
     },
     {
       id: "colar-5",
@@ -81,8 +81,8 @@
       imagem:
         "assets/img/colar-7-1.png",
       imagens: ["assets/img/colar-7-1.png","assets/img/colar-7-2.jpeg"],
-      fio: "Algodão",
-      variantes: [{ cor: "Bege escuro", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+      fio: "Cetim",
+      variantes: [{ cor: "Bege escuro", tamanho: "30cm (colar + alças)", preco: 50.0 }],
     },
    {
       id: "colar-7",
@@ -121,30 +121,90 @@
       imagem:
         "assets/img/colar-11-1.png",
       imagens: ["assets/img/colar-11-1.png","assets/img/colar-11-2.jpeg"],
-      fio: "Algodão",
-      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+      fio: "Cetim",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 50.0 }],
     },
     {
       id: "colar-11",
       categoria: "colares",
-      nome: "Colar Tubular",
+      nome: "Colar Caracol",
       imagem:
         "assets/img/colar-12-1.png",
       imagens: ["assets/img/colar-12-1.png","assets/img/colar-12-2.jpeg"],
       fio: "Algodão",
-      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+      variantes: [{ cor: "Preto e Dourado", tamanho: "30cm (colar + alças)", preco: 45.0 }],
     },
     {
-      id: "colar-10",
+      id: "colar-12",
       categoria: "colares",
       nome: "Colar Tubular",
       imagem:
-        "assets/img/colar-11-1.png",
-      imagens: ["assets/img/colar-11-1.png","assets/img/colar-11-2.jpeg"],
+        "assets/img/colar-13-1.png",
+      imagens: ["assets/img/colar-13-1.png","assets/img/colar-13-2.png", "assets/img/colar-13-3.jpeg"],
       fio: "Algodão",
-      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+      variantes: [{ cor: "Preto", tamanho: "30cm (colar + alças)", preco: 45.0 }],
     },
-     {
+    {
+      id: "colar-13",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-14-1.jpeg",
+      imagens: ["assets/img/colar-14-1.jpeg","assets/img/colar-14-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Marrom", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-14",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-15-1.png",
+      imagens: ["assets/img/colar-15-1.png","assets/img/colar-15-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Mesclado", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-15",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-16-1.png",
+      imagens: ["assets/img/colar-16-1.png","assets/img/colar-16-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Cinza Claro", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-16",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-17-1.png",
+      imagens: ["assets/img/colar-17-1.png","assets/img/colar-17-2.jpg"],
+      fio: "Cetim",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 50.0 }],
+    },
+    {
+      id: "colar-17",
+      categoria: "colares",
+      nome: "Colar Caracol",
+      imagem:
+        "assets/img/colar-18-1.png",
+      imagens: ["assets/img/colar-18-1.png","assets/img/colar-18-2.jpeg"],
+      fio: "Algodão",
+      variantes: [{ cor: "Verde Claro", tamanho: "30cm (colar + alças)", preco: 45.0 }],
+    },
+    {
+      id: "colar-18",
+      categoria: "colares",
+      nome: "Colar Tubular",
+      imagem:
+        "assets/img/colar-19-1.png",
+      imagens: ["assets/img/colar-19-1.png","assets/img/colar-19-2.jpeg"],
+      fio: "Cetim",
+      variantes: [{ cor: "Verde", tamanho: "30cm (colar + alças)", preco: 50.0 }],
+    },
+    {
       id: "touca-laranja",
       categoria: "toucas",
       nome: "Touca laranja",
