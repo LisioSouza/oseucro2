@@ -48,9 +48,15 @@
     return "catalogo.html";
   }
 
+  function sanitizeProductId(rawId) {
+    var id = (rawId || "").trim().toLowerCase();
+    if (!/^[a-z0-9-]+$/.test(id)) return "";
+    return id;
+  }
+
   function initDetalhe() {
     var params = new URLSearchParams(window.location.search);
-    var id = params.get("id");
+    var id = sanitizeProductId(params.get("id"));
     var origem = params.get("origem") || "catalogo";
     var categoria = params.get("categoria") || "";
 
@@ -223,7 +229,6 @@
       }
     }
 
-    // --- ALTERAÇÃO AQUI: Estilização da COR ---
     var cores = p.variantes
       .map(function (v) {
         return (v.cor || "").trim();
@@ -233,22 +238,12 @@
 
     var corEl = document.getElementById("detalhe-cor");
     if (corEl) {
-      // Aplicando negrito e o azul da marca no elemento de cores
       corEl.classList.add("font-bold", "text-[#1e3a5f]");
       corEl.textContent = coresUnicas.join(", ");
     }
 
-    // --- ALTERAÇÃO AQUI: Estilização do FIO ---
-    var corEl = document.getElementById("detalhe-cor");
-    if (corEl) {
-      corEl.classList.remove("font-bold", "text-[#1e3a5f]"); // Remove o azul/negrito do conteúdo
-      corEl.textContent = coresUnicas.join(", ");
-    }
-
-// Volta o conteúdo do Fio para o padrão
     var fioEl = document.getElementById("detalhe-fio");
     if (fioEl) {
-      fioEl.classList.remove("font-bold", "text-[#1e3a5f]"); // Remove o azul/negrito do conteúdo
       fioEl.textContent = p.fio;
     }
 
@@ -267,12 +262,17 @@
         bandanas: "a medida refere-se ao comprimento total da peça aberta.",
         bags: "a medida refere-se ao tamanho total da peça, incluindo alças.",
         bolsas: "a medida refere-se ao tamanho total da peça, incluindo alças.",
-        pareos: "a medida refere-se ao comprimento total da peça aberta.",
+        pareos: "Sob medida.",
       };
       var descricaoMedida =
         descricaoPorCategoria[p.categoria] ||
         "a medida refere-se ao comprimento total da peça.";
       medidasEl.textContent = medidaPrincipal + " - " + descricaoMedida;
+    }
+
+    var whatsappBtn = document.getElementById("detalhe-whatsapp");
+    if (whatsappBtn) {
+      whatsappBtn.href = whatsappUrl("Olá! Tenho interesse na peça " + p.nome + ".");
     }
 
     if (okEl) okEl.hidden = false;

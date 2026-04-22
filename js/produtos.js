@@ -9,7 +9,7 @@
     { id: "cropped", label: "Cropped" },
     { id: "top", label: "Top"},
     { id: "bandanas", label: "Bandanas" },
-    { id: "bags", label: "Bags" },
+    { id: "bags", label: "Pocket Bags" },
     { id: "bolsas", label: "Bolsas" },
     { id: "pareos", label: "Pareôs" },
   ];
@@ -53,7 +53,7 @@
         "assets/img/colar-4-1.png",
       imagens: ["assets/img/colar-4-1.png", "assets/img/colar-4-2.jpeg"],
       fio: "Cetim",
-      variantes: [{ cor: "Verde", tamanho: "60cm (colar + corrente)", preco: 60.0 }],
+      variantes: [{ cor: "Verde", tamanho: "60cm (colar + corrente)", preco: 55.0 }],
     },
     {
       id: "colar-4",
@@ -83,7 +83,7 @@
         "assets/img/colar-7-1.png",
       imagens: ["assets/img/colar-7-1.png","assets/img/colar-7-2.jpeg"],
       fio: "Cetim",
-      variantes: [{ cor: "Marrom Café", tamanho: "75cm", preco: 50.0 }],
+      variantes: [{ cor: "Marrom Café", tamanho: "70cm", preco: 50.0 }],
     },
    {
       id: "colar-7",
@@ -92,7 +92,7 @@
       imagem:
         "assets/img/colar-8-1.png",
       imagens: ["assets/img/colar-8-1.png","assets/img/colar-8-2.jpeg"],
-      fio: "Algodão",
+      fio: "Cetim",
       variantes: [{ cor: "Champagne", tamanho: "60cm (colar + corrente)", preco: 55.0 }],
     },
     {
@@ -113,7 +113,7 @@
         "assets/img/colar-10-1.png",
       imagens: ["assets/img/colar-10-1.png","assets/img/colar-10-2.jpeg"],
       fio: "Algodão",
-      variantes: [{ cor: "Pérola", tamanho: "65cm (colar de amarrar)", preco: 45.0 }],
+      variantes: [{ cor: "Off White", tamanho: "65cm (colar de amarrar)", preco: 45.0 }],
     },
     {
       id: "colar-10",
@@ -332,13 +332,35 @@
       variantes: [{ cor: "Branco", tamanho: "Médio", preco: 60.0 }],
       destaque: true,
     },
-     {
-      id: "bandana-1",
-      categoria: "Bandana",
-      nome: "Bandana Verde",
+    {
+      id: "bag-1",
+      categoria: "bags",
+      nome: "Pocket Bag Cores variadas (em breve)",
       imagem:
-        "assets/img/bandana-verde-1-1.png",
-      imagens: ["assets/img/bandana-verde-1-1.png", "assets/img/bandana-verde-1-2.png"],
+        "assets/img/bag-1.png",
+      imagens: ["assets/img/bag-1.png"],
+      fio: "Algodão",
+      variantes: [{ cor: "Variadas", tamanho: "85 cm", preco: 65.0 }],
+      destaque: true,
+    },
+    {
+      id: "par-1",
+      categoria: "pareos",
+      nome: "Pareô Preto",
+      imagem:
+        "assets/img/par-1-1.png",
+      imagens: ["assets/img/par-1-1.png", "assets/img/par-1-3.png"],
+      fio: "Fio Cordonê",
+      variantes: [{ cor: "Preto", tamanho: "cm", preco: 180.0 }],
+      destaque: true,
+    },
+    {
+      id: "bandana-1",
+      categoria: "bandanas",
+      nome: "Bandana Fio da Saudade",
+      imagem:
+        "assets/img/bandana-1-1.png",
+      imagens: ["assets/img/bandana-1-1.png"],
       fio: "Algodão",
       variantes: [{ cor: "Verde", tamanho: "Médio", preco: 60.0 }],
       destaque: true,
